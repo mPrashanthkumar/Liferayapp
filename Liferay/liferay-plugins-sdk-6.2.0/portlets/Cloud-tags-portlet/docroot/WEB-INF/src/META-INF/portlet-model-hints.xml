@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.cloud.tags.model.Carts">
+		<field name="cartId" type="long" />
+		<field name="userId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="session_id" type="String" />
+		<field name="staffId" type="String" />
+	</model>
+	<model name="com.cloud.tags.model.CartsDesigners">
+		<field name="cartDesignerId" type="long" />
+		<field name="cartId" type="long" />
+		<field name="designId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="kept" type="boolean" />
+		<field name="favorite" type="boolean" />
+		<field name="staffId" type="String" />
+		<field name="userNote" type="String">
+			<hint name="max-length">7000</hint>
+		</field>
+		<field name="XPComputed" type="boolean" />
+	</model>
+	<model name="com.cloud.tags.model.CustomerImages">
+		<field name="customerImageId" type="long" />
+		<field name="designerSKU" type="String" />
+		<field name="designerCusImage" type="String">
+			<hint name="max-length">7000</hint>
+		</field>
+		<field name="customerImage" type="String">
+			<hint name="max-length">7000</hint>
+		</field>
+		<field name="customerName" type="String">
+			<hint name="max-length">7000</hint>
+		</field>
+		<field name="customerAddress" type="String">
+			<hint name="max-length">7000</hint>
+		</field>
+	</model>
+	<model name="com.cloud.tags.model.Designers">
+		<field name="designId" type="long" />
+		<field name="userId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String">
+			<hint name="max-length">7000</hint>
+		</field>
+		<field name="productTitle" type="String">
+			<hint name="max-length">7000</hint>
+		</field>
+		<field name="description" type="String">
+			<hint name="max-length">7000</hint>
+		</field>
+		<field name="shortDescription" type="String">
+			<hint name="max-length">7000</hint>
+		</field>
+		<field name="price" type="String" />
+		<field name="public_url" type="String">
+			<hint name="max-length">7000</hint>
+		</field>
+		<field name="short_url" type="String" />
+		<field name="slug" type="String" />
+		<field name="sizes" type="String" />
+		<field name="colors" type="String" />
+		<field name="brand" type="String" />
+		<field name="saleprice" type="String" />
+		<field name="retailprice" type="String" />
+		<field name="instock" type="String" />
+		<field name="parentid" type="String" />
+		<field name="category" type="String" />
+		<field name="productcode" type="String" />
+		<field name="barcode" type="String" />
+		<field name="matchWith" type="String">
+			<hint name="max-length">7000</hint>
+		</field>
+		<field name="timerDate" type="String" />
+		<field name="tabcurrent" type="boolean" />
+		<field name="liked" type="long" />
+		<field name="ctapp_shorturl" type="boolean" />
+		<field name="ctapp_shorturl_success" type="boolean" />
+		<field name="sayduck" type="boolean" />
+		<field name="left_description" type="String">
+			<hint name="max-length">7000</hint>
+		</field>
+		<field name="right_description" type="String">
+			<hint name="max-length">7000</hint>
+		</field>
+		<field name="isactive" type="boolean" />
+	</model>
+	<model name="com.cloud.tags.model.DesignersBarcode">
+		<field name="designerBarcodeId" type="long" />
+		<field name="barcodeId" type="long" />
+		<field name="designId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.cloud.tags.model.DesignersImages">
+		<field name="designImageId" type="long" />
+		<field name="designId" type="long" />
+		<field name="entity_image1" type="String">
+			<hint name="max-length">7000</hint>
+		</field>
+		<field name="entity_image2" type="String">
+			<hint name="max-length">7000</hint>
+		</field>
+		<field name="entity_image3" type="String">
+			<hint name="max-length">7000</hint>
+		</field>
+		<field name="entity_image4" type="String">
+			<hint name="max-length">7000</hint>
+		</field>
+		<field name="entity_image5" type="String">
+			<hint name="max-length">7000</hint>
+		</field>
+		<field name="entity_image6" type="String">
+			<hint name="max-length">7000</hint>
+		</field>
+		<field name="entity_image7" type="String">
+			<hint name="max-length">7000</hint>
+		</field>
+		<field name="entity_image8" type="String">
+			<hint name="max-length">7000</hint>
+		</field>
+		<field name="entity_image9" type="String">
+			<hint name="max-length">7000</hint>
+		</field>
+		<field name="entity_image10" type="String">
+			<hint name="max-length">7000</hint>
+		</field>
+		<field name="large_image_url" type="String">
+			<hint name="max-length">7000</hint>
+		</field>
+		<field name="small_image_url" type="String">
+			<hint name="max-length">7000</hint>
+		</field>
+		<field name="profile_image_url" type="String">
+			<hint name="max-length">7000</hint>
+		</field>
+	</model>
+	<model name="com.cloud.tags.model.Impressions">
+		<field name="recId" type="long" />
+		<field name="impressionType" type="String" />
+		<field name="impressionId" type="String" />
+		<field name="impressionAction" type="String" />
+		<field name="ipAddress" type="String" />
+		<field name="deviceType" type="String" />
+		<field name="deviceName" type="String" />
+		<field name="deviceWidth" type="String" />
+		<field name="ideviceBrowser" type="String" />
+		<field name="session_Id" type="String" />
+		<field name="companyId" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="storeDeviceId" type="long" />
+		<field name="staffId" type="String" />
+	</model>
+	<model name="com.cloud.tags.model.Recommendations">
+		<field name="recId" type="long" />
+		<field name="designer1" type="String" />
+		<field name="designer2" type="String" />
+		<field name="_type" type="long" />
+		<field name="percentage" type="double" />
+		<field name="companyId" type="long" />
+		<field name="color_name" type="String" />
+		<field name="color_image" type="String">
+			<hint name="max-length">7000</hint>
+		</field>
+	</model>
+	<model name="com.cloud.tags.model.StoreDeviceMap">
+		<field name="uuid" type="long" />
+		<field name="storeName" type="String" />
+		<field name="deviceMacAddress" type="String" />
+		<field name="storeId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="createDate" type="Date" />
+	</model>
+	<model name="com.cloud.tags.model.StoreInformationMap">
+		<field name="uuid" type="long" />
+		<field name="Name" type="String" />
+		<field name="Address" type="String" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="createDate" type="Date" />
+	</model>
+</model-hints>

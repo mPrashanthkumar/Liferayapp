@@ -1,0 +1,67 @@
+RELEASE NOTES FOR  hARVEY NICHOLS CLONE APP ON LIFERAY V 0.91
+COPYRIGHTS CloudTags inc. 2013 
+
+Release notes for HN clone on Liferay - functionalities delivered, Status of internal and Client QA issues.
+
+OVERVIEW
+Requirements for Clone of HN are completed with Liferay migration to 6.2. Existing CSS code is migrated.
+Carts fucntionality is completed where user can select any product and add to cart and send email of the Liked List.
+
+TEST SERVER URL
+Application URL: http://74.207.225.136:9090
+Registered user for testing: 
+	User Name – azam@cloudtags.com
+	Password – test.
+
+Few links for understanding the flow.
+•	http://74.207.225.136:9090/entities
+•	http://74.207.225.136:9090/login
+•	http://74.207.225.136:9090/shortlist
+•	http://74.207.225.136:9090/i-m-ready
+
+WHAT'S COMPLETED
+
+Admin portlet for catalouge
+
+1. CRUD operation of catalogue.
+2. Upload CSV for Bulk import.
+
+Designer page-
+
+1. To display each product details that customer has selected.
+
+2. Carousel to display images. 
+	- Selecting any one image will display the image in popup.
+	- Add to shortlist will add the product to cart.
+	- Editors Notes will be displayed on click.
+	- Recommendation section will display any 4 products have same product code of the selected item.
+
+3. Shortlist page
+	- To display the list of products added to cart.
+	- User can view the product or remove the product from the list.
+	- Portal tracks the removed product.
+	- Style advisor may clear the carts for the session.
+
+4. Email page
+	- User can send email with the Liked list of items added to cart. Respective Style advisor may be selected from dropdown option.
+
+5. Login page
+	- User can login through facebook or regular  login.
+	- Users can create account by clicking on create account link.
+
+COMPLETED ITEMS
+ - Generating of tiny URL for admin portlet is still in progress.
+ - Success message to be displayed when users sends email.
+ - Style Advisor login and profile, Style Advisor's customer list and their like lists 
+ - Barcode integration
+ - Liferay logo to be changed to HN logo in theme.
+ - UI Alingment issue.
+
+PENDING ITEMS 
+- Confirmation dialogue when Style advisor clicks on End session.
+
+KNOWN BUGS
+- Facebook login redirects to empty page after successful login. Liferay 6.2 issue.
+	
+FUTURE RELEASES 
+- NFC card integration

@@ -1,0 +1,258 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.cloud.tags.model.impl.CartsModelImpl">
+		<attributes>
+			<id name="cartId" />
+			<basic name="userId" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="session_id" />
+			<basic name="staffId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.cloud.tags.model.impl.CartsDesignersModelImpl">
+		<attributes>
+			<id name="cartDesignerId" />
+			<basic name="cartId" />
+			<basic name="designId" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="kept" />
+			<basic name="favorite" />
+			<basic name="staffId" />
+			<basic name="userNote" />
+			<basic name="XPComputed" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.cloud.tags.model.impl.CustomerImagesModelImpl">
+		<attributes>
+			<id name="customerImageId" />
+			<basic name="designerSKU" />
+			<basic name="designerCusImage" />
+			<basic name="customerImage" />
+			<basic name="customerName" />
+			<basic name="customerAddress" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.cloud.tags.model.impl.DesignersModelImpl">
+		<attributes>
+			<id name="designId" />
+			<basic name="userId" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="name" />
+			<basic name="productTitle" />
+			<basic name="description" />
+			<basic name="shortDescription" />
+			<basic name="price" />
+			<basic name="public_url" />
+			<basic name="short_url" />
+			<basic name="slug" />
+			<basic name="sizes" />
+			<basic name="colors" />
+			<basic name="brand" />
+			<basic name="saleprice" />
+			<basic name="retailprice" />
+			<basic name="instock" />
+			<basic name="parentid" />
+			<basic name="category" />
+			<basic name="productcode" />
+			<basic name="barcode" />
+			<basic name="matchWith" />
+			<basic name="timerDate" />
+			<basic name="tabcurrent" />
+			<basic name="liked" />
+			<basic name="ctapp_shorturl" />
+			<basic name="ctapp_shorturl_success" />
+			<basic name="sayduck" />
+			<basic name="left_description" />
+			<basic name="right_description" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.cloud.tags.model.impl.DesignersBarcodeModelImpl">
+		<attributes>
+			<id name="designerBarcodeId" />
+			<basic name="barcodeId" />
+			<basic name="designId" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.cloud.tags.model.impl.DesignersImagesModelImpl">
+		<attributes>
+			<id name="designImageId" />
+			<basic name="designId" />
+			<basic name="entity_image1" />
+			<basic name="entity_image2" />
+			<basic name="entity_image3" />
+			<basic name="entity_image4" />
+			<basic name="entity_image5" />
+			<basic name="entity_image6" />
+			<basic name="entity_image7" />
+			<basic name="entity_image8" />
+			<basic name="entity_image9" />
+			<basic name="entity_image10" />
+			<basic name="large_image_url" />
+			<basic name="small_image_url" />
+			<basic name="profile_image_url" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.cloud.tags.model.impl.ImpressionsModelImpl">
+		<attributes>
+			<id name="recId" />
+			<basic name="impressionType" />
+			<basic name="impressionId" />
+			<basic name="impressionAction" />
+			<basic name="ipAddress" />
+			<basic name="deviceType" />
+			<basic name="deviceName" />
+			<basic name="deviceWidth" />
+			<basic name="ideviceBrowser" />
+			<basic name="session_Id" />
+			<basic name="companyId" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="storeDeviceId" />
+			<basic name="staffId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.cloud.tags.model.impl.RecommendationsModelImpl">
+		<attributes>
+			<id name="recId" />
+			<basic name="designer1" />
+			<basic name="designer2" />
+			<basic name="_type" />
+			<basic name="percentage" />
+			<basic name="companyId" />
+			<basic name="color_name" />
+			<basic name="color_image" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.cloud.tags.model.impl.StoreDeviceMapModelImpl">
+		<attributes>
+			<id name="uuid">
+				<column name="UUID_" />
+			</id>
+			<basic name="storeName" />
+			<basic name="deviceMacAddress" />
+			<basic name="storeId" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.cloud.tags.model.impl.StoreInformationMapModelImpl">
+		<attributes>
+			<id name="uuid">
+				<column name="UUID_" />
+			</id>
+			<basic name="Name" />
+			<basic name="Address" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.cloud.tags.model.impl.CartsImpl" name="Carts">
+		<table name="carts" />
+		<attributes />
+	</entity>
+	<entity class="com.cloud.tags.model.impl.CartsDesignersImpl" name="CartsDesigners">
+		<table name="cart_designers" />
+		<attributes />
+	</entity>
+	<entity class="com.cloud.tags.model.impl.CustomerImagesImpl" name="CustomerImages">
+		<table name="designers_customer_images" />
+		<attributes />
+	</entity>
+	<entity class="com.cloud.tags.model.impl.DesignersImpl" name="Designers">
+		<table name="designers" />
+		<attributes />
+	</entity>
+	<entity class="com.cloud.tags.model.impl.DesignersBarcodeImpl" name="DesignersBarcode">
+		<table name="designer_barcodes" />
+		<attributes />
+	</entity>
+	<entity class="com.cloud.tags.model.impl.DesignersImagesImpl" name="DesignersImages">
+		<table name="designers_images" />
+		<attributes />
+	</entity>
+	<entity class="com.cloud.tags.model.impl.ImpressionsImpl" name="Impressions">
+		<table name="Impressions" />
+		<attributes />
+	</entity>
+	<entity class="com.cloud.tags.model.impl.RecommendationsImpl" name="Recommendations">
+		<table name="recommendations" />
+		<attributes />
+	</entity>
+	<entity class="com.cloud.tags.model.impl.StoreDeviceMapImpl" name="StoreDeviceMap">
+		<table name="store_device_map" />
+		<attributes />
+	</entity>
+	<entity class="com.cloud.tags.model.impl.StoreInformationMapImpl" name="StoreInformationMap">
+		<table name="store_information_map" />
+		<attributes />
+	</entity>
+</entity-mappings>
