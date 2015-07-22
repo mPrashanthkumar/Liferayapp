@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<!DOCTYPE project>
-
-<project name="google-login-hook" basedir="." default="deploy">
-	<import file="C:\Zaheer\Cloudtags\Liferay\plugins-sdk-6.2.0\hooks/build-common-hook.xml" />
-</project>
