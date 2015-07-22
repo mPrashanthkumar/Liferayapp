@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+
+body
+{
+	background:#fff !important;
+	text-shadow:none !important;
+	overflow-x: hidden !important;
+	overflow-y: hidden !important;
+}
+html, body
+{
+	width:100%;
+	height:auto;
+	padding:0;
+	margin:0;
+	background:#fff;
+}
+#front-image
+{
+	width:100%;
+	height:900px;
+	position: fixed;
+	background:url(https://ct-made2-liferay-qa.s3.amazonaws.com/images/docked.jpg) no-repeat center center fixed;
+	background-size:100% 100%;
+}

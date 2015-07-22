@@ -1,0 +1,190 @@
+@charset "UTF-8";
+.TabbedPanels {
+  margin: 0px;
+  padding: 0px;
+  clear: none;
+  width: 100%; }
+
+.TabbedPanelsTabGroup {
+  margin: 0px;
+  padding: 1px 0px; }
+
+.TabbedPanelsTab {
+  position: static;
+  top: 1px;
+  float: left;
+  padding: 7px 42px;
+  margin: 0px 0px 0px 0px;
+  font-family: 'Kameron', serif;
+  font-size: 18px;
+  color: #000;
+  background-color: #fff;
+  list-style: none;
+  border-bottom: solid 1px #000;
+  border-top: solid 1px #000;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  -webkit-tap-highlight-color: transparent !important; }
+
+.TabbedPanelsTabSelected {
+  background-color: #fff;
+  border: #000 solid 1px;
+  border-bottom: 0;
+  font-size: 20px;
+  margin-top: -2px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  -webkit-tap-highlight-color: transparent !important; }
+
+.TabbedPanelsTab a {
+  color: black;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  -webkit-tap-highlight-color: transparent !important; }
+
+.TabbedPanelsTab a:active {
+  color: black;
+  text-decoration: none;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  -webkit-tap-highlight-color: transparent !important; }
+
+.TabbedPanelsContentGroup {
+  clear: both;
+  background-color: #fff; }
+
+.TabbedPanelsContent {
+  overflow: hidden;
+  padding: 10px; }
+
+@media screen and (max-width: 480px) {
+  .TabbedPanelsTab {
+    top: 1px;
+    padding: 7px 27px;
+    margin: 0px 0px 0px 0px;
+    font-size: 18px; }
+
+  .TabbedPanelsTabSelected {
+    font-size: 20px;
+    margin-top: -2px; }
+
+  .TabbedPanelsContent {
+    padding: 10px; } }
+@media screen and (max-width: 414px) {
+  .TabbedPanelsTab {
+    top: 1px;
+    padding: 7px 23px;
+    margin: 0px 0px 0px 0px;
+    font-size: 17px; }
+
+  .TabbedPanelsTabSelected {
+    font-size: 19px;
+    margin-top: -2px; }
+
+  .TabbedPanelsContent {
+    padding: 10px; } }
+@media screen and (max-width: 400px) {
+  .TabbedPanelsTab {
+    top: 1px;
+    padding: 7px 21px;
+    margin: 0px 0px 0px 0px;
+    font-size: 16px; }
+
+  .TabbedPanelsTabSelected {
+    font-size: 18px;
+    margin-top: -2px; }
+
+  .TabbedPanelsContent {
+    padding: 10px; } }
+@media screen and (max-width: 375px) {
+  .TabbedPanelsTab {
+    top: 1px;
+    padding: 7px 18px;
+    margin: 0px 0px 0px 0px;
+    font-size: 15px; }
+
+  .TabbedPanelsTabSelected {
+    font-size: 17px;
+    margin-top: -2px; }
+
+  .TabbedPanelsContent {
+    padding: 10px; } }
+@media screen and (max-width: 360px) {
+  .TabbedPanelsTab {
+    top: 1px;
+    padding: 7px 15px;
+    margin: 0px 0px 0px 0px;
+    font-size: 14px; }
+
+  .TabbedPanelsTabSelected {
+    font-size: 16px;
+    margin-top: -2px; }
+
+  .TabbedPanelsContent {
+    padding: 10px; } }
+@media screen and (max-width: 320px) {
+  .TabbedPanelsTab {
+    top: 1px;
+    padding: 7px 9px;
+    margin: 0px 0px 0px 0px;
+    font-size: 13px; }
+
+  .TabbedPanelsTabSelected {
+    font-size: 15px;
+    margin-top: -2px; }
+
+  .TabbedPanelsContent {
+    padding: 10px; } }
+/* Styles for Printing */
+@media print {
+  .TabbedPanels {
+    overflow: visible !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+    -webkit-tap-highlight-color: transparent !important; }
+
+  .TabbedPanelsContentGroup {
+    display: block !important;
+    overflow: visible !important;
+    height: auto !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+    -webkit-tap-highlight-color: transparent !important; }
+
+  .TabbedPanelsContent {
+    overflow: visible !important;
+    display: block !important;
+    clear: both !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+    -webkit-tap-highlight-color: transparent !important; }
+
+  .TabbedPanelsTab {
+    overflow: visible !important;
+    display: block !important;
+    clear: both !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+    -webkit-tap-highlight-color: transparent !important; } }
+a {
+  text-decoration: none !important;
+  outline: none !important;
+  text-shadow: none !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  -webkit-tap-highlight-color: transparent !important; }
+
+a:active {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  -webkit-tap-highlight-color: transparent !important;
+  outline: none !important; }
+
+* {
+  /* Prevent any object from being highlighted upon touch event*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  outline: none !important; }
+
+button,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent !important;
+  outline: none !important;
+  border: 0 !important; }
+

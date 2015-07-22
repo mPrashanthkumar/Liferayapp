@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+#parse ($init)
+
+<html class="$root_css_class" dir="#language ("lang.dir")" lang="$w3c_language_id">
+
+<head>
+	<title>$the_title - $company_name</title>
+
+	<meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" name="viewport" name="viewport" />
+
+	$theme.include($top_head_include)
+</head>
+
+<body class="$css_class">
+<script type='text/javascript' src="http://wurfl.io/wurfl.js"></script>
+<script type="text/javascript">
+var deviceName = WURFL.complete_device_name;
+var deviceType = WURFL.form_factor;
+
+var nVer = navigator.appVersion;
+var nAgt = navigator.userAgent;
+var browserName  = navigator.appName;
+var fullVersion  = ''+parseFloat(navigator.appVersion); 
+var majorVersion = parseInt(navigator.appVersion,10);
+var nameOffset,verOffset,ix;
+
+// In Opera, the true version is after "Opera" or after "Version"
+if ((verOffset=nAgt.indexOf("Opera"))!=-1) {
+ browserName = "Opera";
+ fullVersion = nAgt.substring(verOffset+6);
+ if ((verOffset=nAgt.indexOf("Version"))!=-1) 
+   fullVersion = nAgt.substring(verOffset+8);
+}
+// In MSIE, the true version is after "MSIE" in userAgent
+else if ((verOffset=nAgt.indexOf("MSIE"))!=-1) {
+ browserName = "Microsoft Internet Explorer";
+ fullVersion = nAgt.substring(verOffset+5);
+}
+// In Chrome, the true version is after "Chrome" 
+else if ((verOffset=nAgt.indexOf("Chrome"))!=-1) {
+ browserName = "Chrome";
+ fullVersion = nAgt.substring(verOffset+7);
+}
+// In Safari, the true version is after "Safari" or after "Version" 
+else if ((verOffset=nAgt.indexOf("Safari"))!=-1) {
+ browserName = "Safari";
+ fullVersion = nAgt.substring(verOffset+7);
+ if ((verOffset=nAgt.indexOf("Version"))!=-1) 
+   fullVersion = nAgt.substring(verOffset+8);
+}
+// In Firefox, the true version is after "Firefox" 
+else if ((verOffset=nAgt.indexOf("Firefox"))!=-1) {
+ browserName = "Firefox";
+ fullVersion = nAgt.substring(verOffset+8);
+}
+// In most other browsers, "name/version" is at the end of userAgent 
+else if ( (nameOffset=nAgt.lastIndexOf(' ')+1) < 
+          (verOffset=nAgt.lastIndexOf('/')) ) 
+{
+ browserName = nAgt.substring(nameOffset,verOffset);
+ fullVersion = nAgt.substring(verOffset+1);
+ if (browserName.toLowerCase()==browserName.toUpperCase()) {
+  browserName = navigator.appName;
+ }
+}
+// trim the fullVersion string at semicolon/space if present
+if ((ix=fullVersion.indexOf(";"))!=-1)
+   fullVersion=fullVersion.substring(0,ix);
+if ((ix=fullVersion.indexOf(" "))!=-1)
+   fullVersion=fullVersion.substring(0,ix);
+
+majorVersion = parseInt(''+fullVersion,10);
+if (isNaN(majorVersion)) {
+ fullVersion  = ''+parseFloat(navigator.appVersion); 
+ majorVersion = parseInt(navigator.appVersion,10);
+}
+
+ var swidth = screen.width;
+        var wiwidth = window.innerWidth;
+        var cwidth = document.getElementsByTagName("body")[0].clientWidth;
+var ua = navigator.userAgent,
+browser = {
+    iPad: /iPad/.test(ua),
+    iPhone: /iPhone/.test(ua),
+    Android4: /Android 4/.test(ua)
+};
+
+var browserName= browserName+''+majorVersion;
+var screenWidth= screen.width;
+function deviceSession(){
+		var url = '/i-m-ready?p_p_id=emailnotification_WAR_Cloudtagsportlet&p_p_lifecycle=2&p_p_state=normal&p_p_mode=view&p_p_cacheability=cacheLevelPage&p_p_col_id=column-1&p_p_col_count=1&_emailnotification_WAR_Cloudtagsportlet_CMD=devicesession'+'&deviceName='+deviceName+'&deviceType='+deviceType+'&browserName='+browserName+'&screenWidth='+screenWidth;
+		var xhr = new XMLHttpRequest();
+		xhr.open("POST",url, true);
+		xhr.send();
+		
+		xhr.onreadystatechange = function(e) {
+			if (xhr.readyState == 4) {
+				if(xhr.status == 200){
+				}
+			}
+		};
+	  }
+	  deviceSession();
+</script>
+<a href="#main-content" id="skip-to-content">#language ("skip-to-content")</a>
+
+$theme.include($body_top_include)
+
+#*
+#dockbar()
+
+<div id="heading">
+			<h1 class="site-title">
+				<a class="$logo_css_class" href="$site_default_url" title="#language_format ("go-to-x", [$site_name])">
+					<img alt="$logo_description" height="$site_logo_height" src="$site_logo" width="$site_logo_width" />
+					
+				</a>
+			</h1>		
+			<div style="left: 0px; height: 3px; background: none repeat scroll 0% 0% rgb(0, 0, 0); top: 138px; width: 100%; position: inherit;margin-top:4%;" id="divider"></div>	
+	</div>
+
+
+#if ( $is_signed_in)
+	#set ($sign_out_url = $htmlUtil.escape($theme_display.getURLSignOut()))
+	<a href="$sign_out_url" style="right:5%;">Logout</a>
+#end
+*#
+<div class="container-fluid" id="wrapper">
+
+	<div id="content">
+
+		#if ($selectable)
+			$theme.include($content_include)
+		#else
+			$portletDisplay.recycle()
+
+			$portletDisplay.setTitle($the_title)
+
+			$theme.wrapPortlet("portlet.vm", $content_include)
+		#end
+	</div>
+	
+	
+</div>
+
+$theme.include($body_bottom_include)
+
+$theme.include($bottom_include)
+
+</body>
+
+</html>

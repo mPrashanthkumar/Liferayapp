@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+	<service name="Plugin_cloudtag_DesignersService" provider="java:RPC" style="rpc" use="encoded">
+		<operation xmlns:operNS="urn:http.service.tags.cloud.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="runFeed" qname="operNS:runFeed" returnQName="runFeedReturn" returnType="rtns:string" soapAction=""> </operation>
+		<parameter name="allowedMethods" value="runFeed" />
+		<parameter name="className" value="com.cloud.tags.service.http.DesignersServiceSoap" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<parameter name="wsdlPortType" value="DesignersServiceSoap" />
+		<parameter name="wsdlServiceElement" value="DesignersServiceSoapService" />
+		<parameter name="wsdlServicePort" value="Plugin_cloudtag_DesignersService" />
+		<parameter name="wsdlTargetNamespace" value="urn:http.service.tags.cloud.com" />
+	</service>
+</deployment>
